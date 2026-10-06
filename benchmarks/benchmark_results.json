@@ -1,0 +1,44 @@
+{
+  "anchor_utc": "2026-10-06",
+  "n_btc": 31,
+  "btc_start": 80046.71,
+  "btc_end": 85908.05,
+  "logret_mean": 0.002355573297821915,
+  "logret_std": 0.019505871182596526,
+  "skew": 1.5447263648348342,
+  "kurtosis": 6.378595102252144,
+  "up_days": 13,
+  "n_ret": 30,
+  "derivative_mean_abs": 892.9786666666672,
+  "integral_log_gain": 0.07066719893465745,
+  "cov_eigvals": [
+    10950309.431960419,
+    2.1505330899946085
+  ],
+  "btc_jpy_corr": 0.4531660753780088,
+  "sine7d_R2": 0.025940171287629488,
+  "aapl": {
+    "amount": null,
+    "chg": -0.799988,
+    "current": 332.89,
+    "high": 336.19,
+    "last_close": 333.69,
+    "low": 331.65,
+    "market_capital": 4858257080320,
+    "name": "Apple Inc.",
+    "open": 332.795,
+    "pe_ttm": 38.17546,
+    "percent": -0.23974,
+    "symbol": "AAPL",
+    "timestamp": 1791230402,
+    "turnover_rate": null,
+    "volume": 34328912
+  },
+  "checks": [
+    "2^10=1024 paths",
+    "C(10,5)=252",
+    "derivative~diff",
+    "integral~cumsum",
+    "bell core on returns"
+  ]
+}

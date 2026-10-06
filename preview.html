@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>From One Stone to AI — Interactive Preview</title>
+<style>
+:root{--bg:#0b1020;--card:#151c33;--ink:#eaf0ff;--mut:#9fb0d0;--acc:#6ee7ff;--acc2:#a78bfa;--ok:#34d399}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0b1020,#101736);color:var(--ink)}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+.hero{background:linear-gradient(135deg,#1a2450,#2a1a5a);border:1px solid #2e3a6b;border-radius:20px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hero h1{margin:0 0 8px;font-size:34px;line-height:1.15}.hero p{color:var(--mut);font-size:17px;line-height:1.6}
+.badges span{display:inline-block;background:#0e1530;border:1px solid #2e3a6b;border-radius:999px;padding:6px 12px;margin:4px;font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid #2a3766;border-radius:16px;padding:20px}
+.card h2{margin:0 0 10px;font-size:20px}.card p,.card li{color:#d6deff;line-height:1.6;font-size:15px}
+img,video{width:100%;border-radius:12px;border:1px solid #2a3766;background:#000}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid #2a3766;padding:8px;text-align:left}th{background:#1c2650}
+code{background:#0e1530;padding:2px 6px;border-radius:6px;border:1px solid #2a3766}.btn{display:inline-block;background:var(--acc);color:#00131a;font-weight:700;padding:10px 16px;border-radius:10px;text-decoration:none;margin:6px 6px 0 0}.btn2{background:var(--acc2);color:#12071f}
+.small{color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="badges"><span>MIT</span><span>Python 3.12</span><span>Docker ready</span><span>10 floors verified</span><span>Live data 2026-10-06</span></div>
+<h1>From One Stone to AI 🗼<br/>Rebuild all math with 2 moves</h1>
+<p><b>CEO summary:</b> Start with one stone. <b>Repeat</b> something again and again, or <b>Undo</b> it. That is the whole tower: counting → AI. This repo proves every floor with runnable code and live market data, in pictures a beginner can follow in 10 minutes and an engineer can reproduce in one command.</p>
+<p>Live demo below uses real numbers: BTC 80,046 → 85,908, Galton 1,024 paths with 252 to the middle, calculus that predicts motion, matrices that power AI.</p>
+<a class="btn" href="#start">Start in 60 seconds 🌱</a>
+<a class="btn btn2" href="#floors">See the 10 floors</a>
+<a class="btn" href="https://github.com/" onclick="alert('Push this folder to GitHub, then Settings → Pages → Deploy from branch → main /docs to publish this page.');return false;">How to publish this page</a>
+</div>
+
+<div class="grid">
+<div class="card" id="start"><h2>🌱 Beginner guide — read this and you are dangerous</h2>
+<p>You need zero math. Follow the stones:</p>
+<ol><li><b>Stones:</b> 1 stone + 1 stone = counting. Group by tens → 47 = 4 tens + 7.</li><li><b>Grids:</b> 3 rows of 4 = 12. Turn it → 4 rows of 3 = 12. That is why 3×4 = 4×3.</li><li><b>Undo:</b> 3−5 = −2 (debts). A bar cut in 4 = 1/4. A square of area 2 has side √2 = 1.4142… never repeating.</li><li><b>Balance:</b> x+3=7 → take 3 from both sides → x=4.</li><li><b>Machines:</b> input → double+1 gives line; input² gives parabola.</li><li><b>Triangles + waves:</b> 3²+4²=5². A wheel rim height draws sine.</li><li><b>Speed:</b> curve x² has slope 2x right now.</li><li><b>Distance:</b> speed × thin time slices summed = area. Derivative and integral undo each other.</li><li><b>Arrows + grids:</b> arrow = [across,up]. Matrix moves all arrows at once. Photos and AI words are numbers in grids.</li><li><b>Not knowing:</b> 10 peg rows → 1,024 paths, 1 to far left, 252 to middle → bell curve.</li></ol>
+<p class="small">Step-by-step check: each claim has a green test in <code>experiments/run_all.py</code>. If it prints ALL FLOORS VERIFIED, you understood it correctly.</p>
+</div>
+<div class="card"><h2>▶️ Demo video (60 sec)</h2>
+<video controls preload="metadata" src="docs/assets/demo.mp4"></video>
+<p class="small">If video does not play on GitHub preview, open the GIF below — same story. To add your own YouTube demo: upload MP4 to a GitHub issue to get a URL, then link a thumbnail image to YouTube. See README § Demo.</p>
+<img src="docs/assets/demo.gif" alt="Galton demo animation"/>
+</div>
+</div>
+
+<div class="grid">
+<div class="card"><h2>🎲 Floor 10 — one ball chaos, hundreds law</h2><img src="docs/assets/galton.png" alt="Galton histogram"/><p>10 rows, 2 choices each = <b>1,024</b> paths. Far left needs all-left: <b>1</b> path. Middle needs 5R+5L: <b>252</b> paths. 20k simulated balls peak at bin 5, χ²=18.35 — bell curve emerges.</p></div>
+<div class="card"><h2>📈 Live market — BTC 31 days</h2><img src="docs/assets/btc.png" alt="BTC price and returns"/><p>Real closes 80,046.71 → 85,908.05 (+7.3%). Log-return mean 0.00236, std 0.0195, up 13/30 days. Skew 1.54, kurtosis 6.38 vs normal 0/3: bell core, fat tails.</p></div>
+</div>
+<div class="grid">
+<div class="card"><h2>🔁 Calculus is speed + distance</h2><img src="docs/assets/deriv_integral.png" alt="derivative integral"/><p>Daily change = derivative (mean |change| 892.98 USD). Cumulative log-gain = integral 0.0707. Roundtrip error &lt;1e-9: they undo each other.</p></div>
+<div class="card"><h2>🌊 Honest null — no weekly cycle</h2><img src="docs/assets/sine_null.png" alt="sine null"/><p>Best 7-day sine explains R²=0.026 only. Reporting nulls is a feature: markets do not sing weekly here. BTC–JPY correlation +0.45 (n=22, hypothesis, not law).</p></div>
+</div>
+
+<div class="card"><h2>🧭 The 10 floors at a glance</h2>
+<table><tr><th>Floor</th><th>Idea in one line</th><th>Verified number</th></tr>
+<tr><td>1 Counting</td><td>Group by tens; 0 marks empty place</td><td>235=[2,3,5], 205 uses 0</td></tr>
+<tr><td>2 ×, powers</td><td>Add same = ×; × same = power; turn grid</td><td>3×4=4×3=12; 2¹⁰=1024</td></tr>
+<tr><td>3 Undo</td><td>−, fractions, √2 irrational</td><td>3−5=−2; √2≈1.4142</td></tr>
+<tr><td>4 Algebra</td><td>Balance both sides</td><td>x+3=7 → x=4</td></tr>
+<tr><td>5 Functions</td><td>Machine in→out; plot = picture</td><td>1→3,2→5; parabola 0,1,4,9</td></tr>
+<tr><td>6 Shapes</td><td>9+16=25; wheel height = sine</td><td>hypot(3,4)=5</td></tr>
+<tr><td>7 Derivative</td><td>Zoom until straight = slope now</td><td>d/dx x² = 2x</td></tr>
+<tr><td>8 Integral</td><td>Thin bars summed = area; undoes derivative</td><td>∫₀³x²=9</td></tr>
+<tr><td>9 Matrices</td><td>Columns = where base arrows land; AI = big matrices</td><td>‖[3,4]‖=5</td></tr>
+<tr><td>10 Chance</td><td>Pegs → binomial → bell</td><td>1024 paths, 252 middle</td></tr>
+</table></div>
+
+<div class="grid">
+<div class="card"><h2>✨ Features</h2><ul><li>10 runnable floor scripts + one <code>run_all.py</code> gate</li><li>Live-data benchmark (BTC/FX/AAPL frozen CSV/JSON)</li><li>4 charts + endless GIF (PillowWriter) + MP4 (FFMpegWriter) from code</li><li>Docker one-command reproduce</li><li>Hidden-patterns note with null results</li><li>MIT licensed, Pages-ready (/docs)</li></ul></div>
+<div class="card"><h2>👥 Who is this for? (user stories)</h2><ul><li><b>Student:</b> 10-min picture per floor. Done when run_all passes.</li><li><b>Teacher:</b> GIF+MP4 motion for class. Done when assets play.</li><li><b>Interview prep:</b> grids, √2, zoom, bars, columns, 1024 paths.</li><li><b>Builder:</b> copy Galton/Riemann/derivative snippets.</li><li><b>Researcher:</b> frozen data + Docker reproduce.</li></ul></div>
+</div>
+
+<div class="card"><h2>🚀 Run it</h2>
+<p><code>pip install -r requirements.txt</code><br/><code>python experiments/run_all.py</code> → expect <b>ALL FLOORS VERIFIED</b><br/><code>python experiments/make_figures.py</code> → regenerates GIF (endless loop) + MP4 + 4 charts<br/><code>docker compose up --build</code></p>
+<p class="small">Tech: Python 3.12, NumPy/SciPy/Pandas, Matplotlib PillowWriter + FFMpegWriter, Docker, single-file HTML. Prereqs: Python 3.12 + pip; ffmpeg for MP4; no keys (frozen data).</p>
+<h2>🌐 Publish as website (GitHub Pages, 2026)</h2>
+<ol><li>Push to GitHub (public repo for Free plan).</li><li>Settings → Pages → Source: <b>Deploy from a branch</b> → Branch: <b>main</b> → folder: <b>/docs</b> → Save. Source branch can be any branch; folder <code>/</code> or <code>/docs</code>.</li><li>Open <code>https://&lt;you&gt;.github.io/&lt;repo&gt;/</code> — serves <code>docs/index.html</code>, identical to <code>preview.html</code>. Alternative: Actions <code>configure-pages</code> + <code>upload-pages-artifact</code> + <code>deploy-pages</code>.</li></ol>
+<p class="small">Why two files? <code>preview.html</code> is local preview (uses <code>docs/assets/</code>); <code>docs/index.html</code> is what Pages serves (uses <code>assets/</code>). Usage: run floor scripts solo, swap your CSV into <code>data/live_btc_30d.csv</code> format, rebuild figures. Roadmap: quiz + worksheets, more markets, translations. <a href="#">Back to top ↑</a></p>
+</div>
+<div class="small">Data anchor 2026-10-06. AAPL 332.89 USD. All figures regenerated by code. MIT License.</div>
+</div>
+</body>
+</html>
