@@ -4,7 +4,7 @@
 
 > **CEO summary (30 seconds):** Start with one stone. Do something again — or undo it. That is all of math. Counting → AI in ten floors, each proven by code you can run in one command and pictures you can understand in ten minutes. Live market data (BTC 80,046 → 85,908, 13/30 up-days, calculus duality error &lt;1e-9) shows the tower works on reality, not just textbooks. MIT licensed, Docker reproducible, website-ready. If you learn one repo this year, learn this one.
 
-**Live website:** open `preview.html` locally, or publish in 1 minute via GitHub → Settings → Pages → Deploy from branch → `main` → `/docs` (see § 🌐 Website). Demo video below.
+**Live website:** https://M0-AR.github.io/math-tower-stone-to-ai/ — if you run locally open `preview.html`. Recommended Pages setting: Branch `main` → folder `/docs`. Demo video below.
 
 ## Table of Contents
 - [🌱 Beginner guide — read this and you are a professional](#-beginner-guide--read-this-and-you-are-a-professional)
@@ -173,16 +173,20 @@ From `benchmarks/benchmark_results.json` (anchor 2026-10-06):
 6. **Diagnostic chain:** calculus → algebra → fractions. Build lowest-shaky-floor quiz.
 
 ## 🌐 Website (GitHub Pages)
-- Local: open `preview.html` (references `docs/assets/`). Mirror for Pages: `docs/index.html` (references `assets/`).
-- Publish (2026): push to GitHub → Settings → Pages → Source **Deploy from a branch** → Branch **main** → folder **/docs** → Save → open `https://<you>.github.io/<repo>/` (serves `docs/index.html`, identical to `preview.html`). Source branch can be any branch; folder can be `/` or `/docs`. Public repo required on Free plan.
-- Alternative: GitHub Actions `configure-pages` + `upload-pages-artifact` + `deploy-pages` for artifact deploys.
-- Custom domain: Settings → Pages → Custom domain → add `CNAME` file. Add `.nojekyll` if needed for underscores.
+- Live: https://M0-AR.github.io/math-tower-stone-to-ai/ (`/`) • https://M0-AR.github.io/math-tower-stone-to-ai/preview.html • https://M0-AR.github.io/math-tower-stone-to-ai/docs/preview.html (mirror; one of the last two 404s depending on source — that tells you the source).
+- Local: open `preview.html` (uses `docs/assets/`). Pages entry: `docs/index.html` (uses `assets/`). Canonical copy: `docs/preview.html`.
+- Publish (2026): push → Settings → Pages → Source **Deploy from a branch** → Branch **main** → folder **/docs** (recommended) → Save → wait for Actions “pages build and deployment” → probe `/`, `/preview.html`, `/docs/preview.html`. Source `/docs` serves `docs/x.html` at `/x.html`; source `/` serves `docs/x.html` at `/docs/x.html`. Entry `index.html` must sit at top of chosen source.
+- This repo ships mirrors so both sources resolve: root `preview.html` + `index.html` (redirect) + `.nojekyll`, and `docs/preview.html` + `docs/index.html` + `docs/.nojekyll`. Asset paths are relative (`docs/assets/…` from root, `assets/…` from docs).
+- Alternative: Actions `configure-pages` + `upload-pages-artifact` + `deploy-pages`. Custom domain via `CNAME`.
 
 ## 📁 Repo map
 ```
-preview.html          # shareable preview (root)
-docs/index.html       # Pages entry (identical)
-docs/assets/          # galton.png btc.png deriv_integral.png sine_null.png demo.gif demo.mp4
+index.html            # root redirect → preview.html (makes / resolve under either source)
+preview.html          # root mirror (uses docs/assets/)
+docs/index.html       # Pages entry for /docs source (uses assets/)
+docs/preview.html     # canonical copy (uses assets/)
+docs/assets/          # galton.png btc.png deriv_integral.png sine_null.png demo.gif demo.mp4 preview-screenshot.png
+.nojekyll docs/.nojekyll
 experiments/          # floor01_02 … floor10b_live_market.py + run_all.py + make_figures.py
 data/                 # live_btc_30d.csv live_fx.csv live_aapl.json (source headers)
 benchmarks/           # benchmark_results.json hidden_patterns.md
